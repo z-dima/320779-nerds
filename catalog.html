@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Нёрдс</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-logo">
+                    <img src="img/logo.png" alt="nerd's" width="300" height="100">
+                </div>
+                <nav class="main-navigation">
+                    <ul>
+                        <li><a href="#">Студия</a></li>
+                        <li><a href="#">Клиенты</a></li>
+                        <li><a href="#">Магазин</a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#">Корзина</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="logo_title">
+                <h1>Магазин готовых шаблонов</h1>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <div class="sort">
+            <h4>Стоимость</h4>
+            <form action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data">
+                <div class="setting-item">
+                    <label>От</label>
+                    <textarea rows="3" cols="5"></textarea>
+                    <label>До</label>
+                    <textarea rows="3" cols="5"></textarea>
+                </div>
+                <div class="setting-item">
+                    <h4>Сетка:</h4>
+                    <input type="radio" name="grid" id="adaptiv-field" value="adaptiv" checked>
+                    <label for="adaptiv">Адаптивная</label>
+                    <br>
+                    <input type="radio" name="grid" id="fixed-field" value="fixed">
+                    <label for="fixed-field">Фиксированная</label>
+                    <br>
+                    <input type="radio" name="grid" id="elastic-field" value="elastic">
+                    <label for="elastic-field">Резиновая</label>
+                </div>
+                <div class="setting-item">
+                    <h4>Особенности:</h4>
+                    <input type="checkbox" name="slayder" id="slayder-field" checked>
+                    <label for="slayder-field">Слайдер</label>
+                    <br>
+                    <input type="checkbox" name="advantage" id="advantage-field">
+                    <label for="advantage-field">Блок преимуществ</label>
+                    <br>
+                    <input type="checkbox" name="news" id="news-field" checked>
+                    <label for="news-field">Новости</label>
+                    <br>
+                    <input type="checkbox" name="galery" id="galery-field">
+                    <label for="galery-field">Галерея</label>
+                    <br>
+                    <input type="checkbox" name="basket" id="basket-field">
+                    <label for="basket-field">Корзина</label>
+                </div>
+                <input type="submit" value="Показать">
+        </form>
+        </div>
+        <div class="product">
+            <div class="characteristic">
+                <h4>Сортировать</h4>
+                <span>По цене</span>
+                <span>По типу</span>
+                <span>По названию</span>
+                <span>Down</span>
+                <span>Up</span>
+            </div>
+            <div class="product-line">
+                <div class="product-item">
+                    <div class="grey-line"></div>
+                    <img src="img/sedona_item.png" alt="Sedona">
+                    <div class="click">
+                        <b>Sedona</b>
+                        <p>Информационный сайт для туристов</p>
+                        <a class="btn" href="#">9900 руб.</a>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="grey-line"></div>
+                    <img src="img/pink_item.png" alt="Pink">
+                    <div class="click">
+                        <b>Pink</b>
+                        <p>Сайт мобильного приложения</p>
+                        <a class="btn" href="#">8500 руб.</a>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="grey-line"></div>
+                    <img src="img/borodinski_item.png" alt="Borodinski">
+                    <div class="click">
+                        <b>Barbershop</b>
+                        <p>Сайт барбершопа и товаров для стрижки</p>
+                        <a class="btn" href="#">10000 руб.</a>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="grey-line"></div>
+                    <img src="img/mishka_item.png" alt="Mishka">
+                    <div class="click">
+                        <b>Mishka</b>
+                        <p>Торговый сайт вязаных изделий</p>
+                        <a class="btn" href="#">12000 руб.</a>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="grey-line"></div>
+                    <img src="img/learn-plus_item.png" alt="Lerarn+">
+                    <div class="click">
+                        <b>Учёба+</b>
+                        <p>Информационный сайт для поиска тьютора</p>
+                        <a class="btn" href="#">9900 руб.</a>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="grey-line"></div>
+                    <img src="img/craft_item.png" alt="Craft-Kvas">
+                    <div class="click">
+                        <b>Крафтовый квас</b>
+                        <p>Информационный сайт для заказчиков</p>
+                        <a class="btn" href="#">8700 руб.</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pages">
+                <a class="btn" href="#">1</a>
+                <a class="btn" href="#">2</a>
+                <a class="btn" href="#">3</a>
+                <a class="btn" href="#">Следующая</a>
+            </div>
+        </div>
+        <div class="map">
+            <div class="contacts">
+                <h3>NЁrds design studio</h3>
+                <p>191186, Санкт-Петербург,<br>
+                ул. Б. Конюшенная, д. 19/8<br>
+                <br>
+                <a href="+7(812)275-75-75">тел. +7 (812) 275-75-75</a>
+                </p>
+                <a class="btn" href="#">Напиши нам</a>
+            </div>
+        </div>
+    </main>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer_social">
+                <a class="social-btn social-vk" href="https://vk.com/htmlacademy">Вконтакте</a>
+                <a class="social-btn social-facebook" href="https://facebook.com/htmlacademy">Фейсбук</a>
+                <a class="social-btn social-instagram" href="https://instagram.com/htmlacademy">Инстаграм</a>
+            </div>
+            <div class="discount">
+                <h4>Давай дружить, это выгодно!</h4>
+                <p>Скидка 10% для друзей из социальных сетей.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
