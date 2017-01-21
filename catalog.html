@@ -9,7 +9,7 @@
         <div class="container">
             <div class="header-top">
                 <div class="header-logo">
-                    <img src="img/logo.png" alt="nerd's" width="300" height="100">
+                    <a href="index.html"><img src="img/logo.png" alt="nerd's" width="300" height="100"></a>
                 </div>
                 <nav class="main-navigation">
                     <ul>
@@ -21,53 +21,45 @@
                     </ul>
                 </nav>
             </div>
-            <div class="logo_title">
+            <div class="logo-title">
                 <h1>Магазин готовых шаблонов</h1>
             </div>
         </div>
     </header>
     <main class="container">
-        <div class="sort">
-            <h4>Стоимость</h4>
+        <div class="select">
             <form action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data">
-                <div class="setting-item">
-                    <label>От</label>
-                    <textarea rows="3" cols="5"></textarea>
-                    <label>До</label>
-                    <textarea rows="3" cols="5"></textarea>
+                <h4>Стоимость</h4>
+                <div class="select-item">
+                    <label>От<input type="text" name="begin"></label>
+                    <label>До<input type="text" name="end"></label>
                 </div>
-                <div class="setting-item">
+                <div class="select-item">
                     <h4>Сетка:</h4>
-                    <input type="radio" name="grid" id="adaptiv-field" value="adaptiv" checked>
+                    <input type="radio" name="layout" id="adaptiv" value="adaptiv" checked>
                     <label for="adaptiv">Адаптивная</label>
-                    <br>
-                    <input type="radio" name="grid" id="fixed-field" value="fixed">
-                    <label for="fixed-field">Фиксированная</label>
-                    <br>
-                    <input type="radio" name="grid" id="elastic-field" value="elastic">
-                    <label for="elastic-field">Резиновая</label>
+                    <input type="radio" name="layout" id="fixed" value="fixed">
+                    <label for="fixed">Фиксированная</label>
+                    <input type="radio" name="layout" id="elastic" value="elastic">
+                    <label for="elastic">Резиновая</label>
                 </div>
-                <div class="setting-item">
+                <div class="select-item">
                     <h4>Особенности:</h4>
-                    <input type="checkbox" name="slayder" id="slayder-field" checked>
-                    <label for="slayder-field">Слайдер</label>
-                    <br>
-                    <input type="checkbox" name="advantage" id="advantage-field">
-                    <label for="advantage-field">Блок преимуществ</label>
-                    <br>
-                    <input type="checkbox" name="news" id="news-field" checked>
-                    <label for="news-field">Новости</label>
-                    <br>
-                    <input type="checkbox" name="galery" id="galery-field">
-                    <label for="galery-field">Галерея</label>
-                    <br>
-                    <input type="checkbox" name="basket" id="basket-field">
-                    <label for="basket-field">Корзина</label>
+                    <input type="checkbox" name="slayder" id="slayder" checked>
+                    <label for="slayder">Слайдер</label>
+                    <input type="checkbox" name="advantage" id="advantage">
+                    <label for="advantage">Блок преимуществ</label>
+                    <input type="checkbox" name="news" id="news" checked>
+                    <label for="news">Новости</label>
+                    <input type="checkbox" name="galery" id="galery">
+                    <label for="galery">Галерея</label>
+                    <input type="checkbox" name="basket" id="basket">
+                    <label for="basket">Корзина</label>
                 </div>
                 <input type="submit" value="Показать">
         </form>
         </div>
-        <div class="product">
+        <div class="galery">
             <div class="characteristic">
                 <h4>Сортировать</h4>
                 <span>По цене</span>
@@ -76,61 +68,61 @@
                 <span>Down</span>
                 <span>Up</span>
             </div>
-            <div class="product-line">
-                <div class="product-item">
-                    <div class="grey-line"></div>
+            <div class="galery-sort">
+                <article class="galery-item">
+                    <div class="item-galeri-header"></div>
                     <img src="img/sedona_item.png" alt="Sedona">
-                    <div class="click">
-                        <b>Sedona</b>
+                    <div class="by-block">
+                        <a href="#"><b>Sedona</b></a>
                         <p>Информационный сайт для туристов</p>
                         <a class="btn" href="#">9900 руб.</a>
                     </div>
-                </div>
-                <div class="product-item">
-                    <div class="grey-line"></div>
+                </article>
+                <article class="galery-item">
+                    <div class="item-galeri-header"></div>
                     <img src="img/pink_item.png" alt="Pink">
-                    <div class="click">
-                        <b>Pink</b>
+                    <div class="by-block">
+                        <a href="#"><b>Pink</b></a>
                         <p>Сайт мобильного приложения</p>
                         <a class="btn" href="#">8500 руб.</a>
                     </div>
-                </div>
-                <div class="product-item">
-                    <div class="grey-line"></div>
+                </article>
+                <article class="galery-item">
+                    <div class="item-galeri-header"></div>
                     <img src="img/borodinski_item.png" alt="Borodinski">
-                    <div class="click">
-                        <b>Barbershop</b>
+                    <div class="by-block">
+                        <a href="#"><b>Barbershop</b></a>
                         <p>Сайт барбершопа и товаров для стрижки</p>
                         <a class="btn" href="#">10000 руб.</a>
                     </div>
-                </div>
-                <div class="product-item">
-                    <div class="grey-line"></div>
+                </article>
+                <article class="galery-item">
+                    <div class="item-galeri-header"></div>
                     <img src="img/mishka_item.png" alt="Mishka">
-                    <div class="click">
-                        <b>Mishka</b>
+                    <div class="by-block">
+                        <a href="#"><b>Mishka</b></a>
                         <p>Торговый сайт вязаных изделий</p>
                         <a class="btn" href="#">12000 руб.</a>
                     </div>
-                </div>
-                <div class="product-item">
-                    <div class="grey-line"></div>
+                </article>
+                <article class="galery-item">
+                    <div class="item-galeri-header"></div>
                     <img src="img/learn-plus_item.png" alt="Lerarn+">
-                    <div class="click">
-                        <b>Учёба+</b>
+                    <div class="by-block">
+                        <a href="#"><b>Учёба+</b></a>
                         <p>Информационный сайт для поиска тьютора</p>
                         <a class="btn" href="#">9900 руб.</a>
                     </div>
-                </div>
-                <div class="product-item">
-                    <div class="grey-line"></div>
+                </article>
+                <article class="galery-item">
+                    <div class="item-galeri-header"></div>
                     <img src="img/craft_item.png" alt="Craft-Kvas">
-                    <div class="click">
-                        <b>Крафтовый квас</b>
+                    <div class="by-block">
+                        <a href="#"><b>Крафтовый квас</b></a>
                         <p>Информационный сайт для заказчиков</p>
                         <a class="btn" href="#">8700 руб.</a>
                     </div>
-                </div>
+                </article>
             </div>
             <div class="pages">
                 <a class="btn" href="#">1</a>
@@ -139,18 +131,18 @@
                 <a class="btn" href="#">Следующая</a>
             </div>
         </div>
-        <div class="map">
-            <div class="contacts">
-                <h3>NЁrds design studio</h3>
-                <p>191186, Санкт-Петербург,<br>
-                ул. Б. Конюшенная, д. 19/8<br>
-                <br>
-                <a href="+7(812)275-75-75">тел. +7 (812) 275-75-75</a>
-                </p>
-                <a class="btn" href="#">Напиши нам</a>
-            </div>
-        </div>
     </main>
+    <div class="map">
+        <div class="contacts">
+            <h3>NЁrds design studio</h3>
+            <p>191186, Санкт-Петербург,<br>
+            ул. Б. Конюшенная, д. 19/8<br>
+            <br>
+            <a href="tel:+7(812)275-75-75">тел. +7 (812) 275-75-75</a>
+            </p>
+            <a class="btn" href="#">Напиши нам</a>
+        </div>
+    </div>
     <footer class="main-footer">
         <div class="container">
             <div class="footer_social">
