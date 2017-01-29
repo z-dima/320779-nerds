@@ -109,10 +109,6 @@ body {
     padding: 0 10px;
 }
 
-.main-header {
-  margin-bottom: 80px;
-}
-
 .main-navigation {
     float: right;
     width: 700px;
@@ -128,6 +124,9 @@ body {
     float: right;
 }
 
+.main-header {
+    padding: 30px 80px;
+}
 .header-logo {
     float: left;
     width: 200px;
@@ -141,15 +140,23 @@ body {
     background-color: aqua;
 }
 
+.more-info {
+    padding: 20px 80px;
+    min-height: 250px;
+    width: 400px;
+}
+
 .services {
-    padding-bottom: 80px;
-    border-bottom: 3px orange solid; 
+    padding: 50px 80px;
+    border-bottom: 3px orange solid;
+    min-height: 300px;
+
 }
 
 .services-item {
     float: left;
     width: 300px;
-    min-height: 175px;
+    min-height: 125px;
     margin-right: 40px;
     background-color: darkmagenta;
 }
@@ -161,6 +168,7 @@ body {
 .about-company {
     padding: 50px 80px;
     border-bottom: 3px orange solid;
+    min-height: 400px;
 }
 
 .about-company-left {
@@ -172,23 +180,20 @@ body {
 
 .about-company-right {
     float: right;
-    width: 300px;
-    min-height: 300px;
+    width: 360px;
+    min-height: 410px;
     background-color: darkorchid;
 }
 
 .customers {
     min-height: 180px;
-    padding: 50px 0px;
-    margin-bottom: 80px;
+    padding: 30px 80px;
     border-bottom: 3px orange solid;
 }
 .customers a {
     float: left;
-    width: 260px;
-    margin-right: 5px;
-    padding-right: 10px;
-    min-height: 180px;
+    width: 240px;
+    margin-right: 22px;
     border-right: 1px orange solid;
 }
 
@@ -199,12 +204,18 @@ body {
 }
 
 .map {
-    min-height: 250px;
+    min-height: 416px;
     margin-right: auto;
     margin-left: auto;
+    margin-top: 40px;
 }
 
+.map img {
+    float:right;
+    margin-right: 0;
+}
 .contacts {
+    float: left;
     width: 300px;
     height: 200px;
     margin-left: 150px;
