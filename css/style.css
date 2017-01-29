@@ -7,6 +7,7 @@ body {
     font-weight: normal;
     color: black;
     background-color: white;
+    background-image: url("../nerds-index.jpg"); /*загружаю изо*/
 }
 
 header{
@@ -81,6 +82,154 @@ h4 {
     color: grey;
 }
 
+/*СВОЙСТВА ДЛЯ СЕТКИ*/
+
+html,
+body {
+  min-width: 1200px;
+  min-height: 2400px;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: white url("fire.jpg") no-repeat;
+  background-size: 1200px auto;
+}
+
+.clearfix::after {
+   content: "";
+
+  display: table;
+  clear: both;
+}
+.container {
+    width: 1190px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.main-header {
+  margin-bottom: 80px;
+}
+
+.main-navigation {
+    float: right;
+    width: 700px;
+    min-height: 65px;
+    background-color: crimson;
+}
+
+.main-navigation li {
+    float: left;
+    margin-right: 10px;
+}
+.main-navigation li:last-child {
+    float: right;
+}
+
+.header-logo {
+    float: left;
+    width: 200px;
+    min-height: 65px;
+    background-color: coral;
+}
+
+.slider{
+    clear: both;
+    min-height: 300px;
+    background-color: aqua;
+}
+
+.services {
+    padding-bottom: 80px;
+    border-bottom: 3px orange solid; 
+}
+
+.services-item {
+    float: left;
+    width: 300px;
+    min-height: 175px;
+    margin-right: 40px;
+    background-color: darkmagenta;
+}
+
+.services-item:last-child {
+  margin-right: 0; /*на случай если придётся подгонять прям до края*/
+}
+
+.about-company {
+    padding: 50px 80px;
+    border-bottom: 3px orange solid;
+}
+
+.about-company-left {
+    float: left;
+    width: 600px;
+    min-height: 300px;
+    background-color: darkorchid;
+}
+
+.about-company-right {
+    float: right;
+    width: 300px;
+    min-height: 300px;
+    background-color: darkorchid;
+}
+
+.customers {
+    min-height: 180px;
+    padding: 50px 0px;
+    margin-bottom: 80px;
+    border-bottom: 3px orange solid;
+}
+.customers a {
+    float: left;
+    width: 260px;
+    margin-right: 5px;
+    padding-right: 10px;
+    min-height: 180px;
+    border-right: 1px orange solid;
+}
+
+.customers a:last-child {
+    float: right;
+    margin-right: 0;
+    border-right: none;
+}
+
+.map {
+    min-height: 250px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.contacts {
+    width: 300px;
+    height: 200px;
+    margin-left: 150px;
+    background-color: aliceblue;
+}
+
+.main-footer {
+      margin-top: 65px;
+      padding-top: 60px;
+      padding-bottom: 40px;
+}
+
+.footer-social {
+    float: left;
+    width: 400px;
+    min-height: 90px;
+}
+
+.discount {
+    float: left;
+    width: 750px;
+    min-height: 90px;
+}
+/*ДЛЯ СЕТКИ*/
+
 /*Кнопки*/
 .btn {
     color: red;
@@ -93,5 +242,15 @@ h4 {
 }
 
 .btn:active {
-    color: rgba(250, 250, 250, 0.3);
+    color: rgba(250, 255, 255, 0.3);
+}
+
+div, article, header, footer, section, a, p {
+    outline: 1px solid indigo;
+    background-color: rgba(0, 0, 50, 0.1);
+}
+
+.container {
+    outline: 1px solid red;
+    background-color: rgba(0, 50, 0, 0.2);
 }
