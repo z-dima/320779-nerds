@@ -7,7 +7,7 @@ body {
     font-weight: normal;
     color: black;
     background-color: white;
-    background-image: url("../nerds-index.jpg"); /*загружаю изо*/
+    /*background-image: url("../nerds-index.jpg"); /*загружаю изо*/
 }
 
 header{
@@ -82,50 +82,38 @@ h4 {
     color: grey;
 }
 
-/*СВОЙСТВА ДЛЯ СЕТКИ*/
-
-html,
-body {
-  min-width: 1200px;
-  min-height: 2400px;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background: white url("fire.jpg") no-repeat;
-  background-size: 1200px auto;
-}
+/**************СВОЙСТВА ДЛЯ СЕТКИ***************************/
 
 .clearfix::after {
-   content: "";
-
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
+
 .container {
-    width: 1190px;
+    width: 1160px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 20px;
 }
 
 .main-navigation {
     float: right;
-    width: 700px;
-    min-height: 65px;
+    width: 850px;
+    min-height: 70px;
     background-color: crimson;
 }
 
 .main-navigation li {
     float: left;
-    margin-right: 10px;
+    padding: 10px;
+    margin-right: 25px;
 }
 .main-navigation li:last-child {
     float: right;
 }
 
 .main-header {
-    padding: 30px 80px;
+    padding-top: 50px;
 }
 .header-logo {
     float: left;
@@ -141,59 +129,62 @@ body {
 }
 
 .more-info {
-    padding: 20px 80px;
     min-height: 250px;
     width: 400px;
 }
 
 .services {
-    padding: 50px 80px;
+    padding-top: 80px;
     border-bottom: 3px orange solid;
-    min-height: 300px;
-
+    min-height: 425px;
 }
 
 .services-item {
     float: left;
     width: 300px;
-    min-height: 125px;
-    margin-right: 40px;
+    min-height: 145px;
+    margin-right: 100px;
     background-color: darkmagenta;
 }
 
 .services-item:last-child {
-  margin-right: 0; /*на случай если придётся подгонять прям до края*/
+    margin-right: 0; /*на случай если придётся подгонять прям до края*/
 }
 
 .about-company {
-    padding: 50px 80px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     border-bottom: 3px orange solid;
-    min-height: 400px;
+    min-height: 440px;
 }
 
 .about-company-left {
     float: left;
-    width: 600px;
-    min-height: 300px;
+    width: 660px;
+    min-height: 430px;
+    margin-right: 100px;
     background-color: darkorchid;
 }
 
 .about-company-right {
     float: right;
-    width: 360px;
-    min-height: 410px;
+    width: 400px;
+    min-height: 430px;
     background-color: darkorchid;
 }
 
+.about-company-right img {
+    display: inline-block;
+    margin-left: 40px;
+}
+
 .customers {
-    min-height: 180px;
-    padding: 30px 80px;
+    min-height: 190px;
     border-bottom: 3px orange solid;
 }
 .customers a {
     float: left;
-    width: 240px;
-    margin-right: 22px;
+    margin-right: 38px;
     border-right: 1px orange solid;
 }
 
@@ -204,28 +195,26 @@ body {
 }
 
 .map {
-    min-height: 416px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 40px;
+    min-height: 335px;
+    margin-top: 75px;
+    margin-bottom: 40px;
+    padding-bottom: 80px;
 }
 
 .map img {
-    float:right;
     margin-right: 0;
 }
 .contacts {
-    float: left;
+    position: absolute;
     width: 300px;
     height: 200px;
-    margin-left: 150px;
+    margin-top: 25px;
+    margin-left: 50px;
     background-color: aliceblue;
 }
 
 .main-footer {
-      margin-top: 65px;
-      padding-top: 60px;
-      padding-bottom: 40px;
+    min-height: 80px;
 }
 
 .footer-social {
@@ -238,6 +227,74 @@ body {
     float: left;
     width: 750px;
     min-height: 90px;
+}
+
+/*****************************СТРАНИЦА МАГАЗИНА********************/
+
+.logo-title {
+    text-align: center;
+    clear: both;
+    min-height: 235px;
+    background-color: aqua;
+}
+
+.select {
+    float: left;
+    width: 260px;
+    min-height: 800px;
+    margin-right: 140px;
+}
+.select h4 {
+    padding-bottom: 30px;
+}
+
+.select-item {
+    min-height: 150px;
+}
+.gallery {
+    float: left;
+    width: 760px;
+}
+
+.gallery-sort {
+    padding-bottom: 30px;
+}
+
+.gallery-item {
+    float: left;
+    padding-bottom: 30px;
+}
+
+.item-galleri-header {
+    min-height: 40px;
+}
+
+.gallery-item:nth-child(2n) {
+    float:right;
+    margin-right: 0;
+}
+
+.buy-block {
+    display: none;
+}
+
+.pages {
+    padding-top: 30px;
+    clear: both;
+}
+
+.pages a {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    margin-right: 15px;
+}
+
+.pages a:last-child {
+    width: 250px;
+}
+.gallery-sort h4 {
+    display: inline-block;
 }
 /*ДЛЯ СЕТКИ*/
 
@@ -254,6 +311,21 @@ body {
 
 .btn:active {
     color: rgba(250, 255, 255, 0.3);
+}
+
+.footer-social a {
+    display: inline-block;
+    vertical-align: top;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+.footer-social img {
+    margin-top: 30px;
+    margin-left: 30px;
 }
 
 div, article, header, footer, section, a, p {
