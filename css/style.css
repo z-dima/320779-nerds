@@ -14,11 +14,12 @@ header{
   background-color: #eeeeee;
 }
 
-h1 {
+b {
     font-size: 55px;
     line-height: 55px;
     color: black;
     font-weight: normal;
+    text-decoration: none;
 }
 
 h2 {
@@ -81,7 +82,19 @@ h4 {
 .main-navigation a:active {
     color: grey;
 }
+/*Меню навигации сортировки*/
+.gallery-sort a {
+    color: black;
+    text-decoration: none;
+}
 
+.gallery-sort a:hover {
+    color:red;
+}
+
+.gallery-sort a:active {
+    color: grey;
+}
 /**************СВОЙСТВА ДЛЯ СЕТКИ***************************/
 
 .clearfix::after {
@@ -124,13 +137,26 @@ h4 {
 
 .slider{
     clear: both;
-    min-height: 300px;
-    background-color: aqua;
+    min-height: 425px;
+    
+}
+
+.slider-pages:nth-child(1) {
+     background: url("../img/nerds-index-slide1.png") no-repeat right ;
+}
+.slider-pages:nth-child(2) {
+     background: url("../img/nerds-index-slide2.png") no-repeat right ;
+}
+.slider-pages:nth-child(3) {
+     background: url("../img/nerds-index-slide3.png") no-repeat right ;
 }
 
 .more-info {
+    padding-top: 70px;
     min-height: 250px;
     width: 400px;
+    min-height: 355px;
+   
 }
 
 .services {
@@ -199,6 +225,7 @@ h4 {
     margin-top: 75px;
     margin-bottom: 40px;
     padding-bottom: 80px;
+    background-image: url("../img/map-location.png");
 }
 
 .map img {
@@ -207,7 +234,7 @@ h4 {
 .contacts {
     position: absolute;
     width: 300px;
-    height: 200px;
+    min-height: 200px;
     margin-top: 25px;
     margin-left: 50px;
     background-color: aliceblue;
@@ -232,9 +259,10 @@ h4 {
 /*****************************СТРАНИЦА МАГАЗИНА********************/
 
 .logo-title {
+    padding-top: 50px;;
     text-align: center;
     clear: both;
-    min-height: 235px;
+    min-height: 185px;
     background-color: aqua;
 }
 
@@ -244,8 +272,26 @@ h4 {
     min-height: 800px;
     margin-right: 140px;
 }
-.select h4 {
-    padding-bottom: 30px;
+
+.cost-block {
+    min-height: 50px;
+    width: 200px;
+    background-color: gray;
+}
+.select-item:nth-child(1) {
+    text-transform: uppercase;
+}
+input[type="text"] {
+    width: 50px;
+    margin-right: 20px;
+    background-color: gray;
+    border: none;
+}
+
+input[type="radio"],
+input[type="checkbox"]
+{
+    display: block;
 }
 
 .select-item {
@@ -260,18 +306,24 @@ h4 {
     padding-bottom: 30px;
 }
 
-.gallery-item {
-    float: left;
-    padding-bottom: 30px;
+.gallery-wrap {
+    font-size: 0;
 }
 
-.item-galleri-header {
-    min-height: 40px;
+.gallery-item {
+    display: inline-block;
+    margin-bottom: 30px;
+    margin-right: 40px;
+    vertical-align: top;
 }
 
 .gallery-item:nth-child(2n) {
-    float:right;
     margin-right: 0;
+}
+
+.item-gallery-header {
+    min-height: 40px;
+    background-color: dimgrey;
 }
 
 .buy-block {
@@ -288,6 +340,14 @@ h4 {
     width: 45px;
     height: 45px;
     margin-right: 15px;
+    background-color: #eeeeee;
+    color: black;
+}
+.pages a:hover {
+    background-color: lightgrey;
+}
+.pages a:active {
+    background-color: gray;
 }
 
 .pages a:last-child {
@@ -300,17 +360,27 @@ h4 {
 
 /*Кнопки*/
 .btn {
-    color: red;
+    display: block;
+    color: white;
+    background-color: crimson;
+    border-radius: 5px;
     text-transform: uppercase;
     text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    width: 140px;
+}
+
+.more-info .btn {
+    width: 200px;
 }
 
 .btn:hover {
-    color: darkred;
+    background-color: red;
 }
 
 .btn:active {
-    color: rgba(250, 255, 255, 0.3);
+    background-color: darkred;
 }
 
 .footer-social a {
@@ -321,11 +391,17 @@ h4 {
     border-radius: 50%;
     margin-top: 10px;
     margin-right: 5px;
+    background-color: dimgray;
 }
 
-.footer-social img {
-    margin-top: 30px;
-    margin-left: 30px;
+.social-vk {
+    background: url("../img/vk-icon.png") no-repeat center;
+}
+.social-facebook {
+    background: url("../img/fb-icon.png") no-repeat center;
+}
+.social-instagram {
+    background: url("../img/insta-icon.png") no-repeat center;
 }
 
 div, article, header, footer, section, a, p {

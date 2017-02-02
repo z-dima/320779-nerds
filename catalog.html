@@ -30,10 +30,16 @@
     <main class="container clearfix">
         <div class="select">
             <form action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data">
-                <h4>Стоимость:</h4>
                 <div class="select-item">
-                    <label>От<input type="text" name="begin"></label>
-                    <label>До<input type="text" name="end"></label>
+                    <h4>Стоимость:</h4>
+                    <div class="cost-block">
+                        <div class="cost-line">
+                            <div class="cost-line-left"></div>
+                            <div class="cost-line-right"></div>
+                        </div>
+                    </div>
+                    <label>От <input type="text" name="begin"></label>
+                    <label>До <input type="text" name="end"></label>
                 </div>
                 <div class="select-item">
                     <h4>Сетка:</h4>
@@ -63,15 +69,15 @@
         <div class="gallery">
             <div class="gallery-sort">
                 <h4>Сортировать:</h4>
-                <span>По цене</span>
-                <span>По типу</span>
-                <span>По названию</span>
-                <span>Down</span>
-                <span>Up</span>
+                <a href="#">По цене</a>
+                <a href="#">По типу</a>
+                <a href="#">По названию</a>
+                <a href="#">Down</a>
+                <a href="#">Up</a>
             </div>
             <div class="gallery-wrap">
                 <article class="gallery-item">
-                    <div class="item-galleri-header"></div>
+                    <div class="item-gallery-header"></div>
                     <img src="img/img-sedona.jpg" alt="Sedona" width="360" height="576">
                     <div class="buy-block">
                         <a href="#">Sedona</a>
@@ -80,7 +86,7 @@
                     </div>
                 </article>
                 <article class="gallery-item">
-                    <div class="item-galleri-header"></div>
+                    <div class="item-gallery-header"></div>
                     <img src="img/img-pink.jpg" alt="Pink" width="360" height="576">
                     <div class="buy-block">
                         <a href="#">Pink</a>
@@ -89,7 +95,7 @@
                     </div>
                 </article>
                 <article class="gallery-item">
-                    <div class="item-galleri-header"></div>
+                    <div class="item-gallery-header"></div>
                     <img src="img/img-barbershop.jpg" alt="Borodinski" width="360" height="576">
                     <div class="buy-block">
                         <a href="#">Barbershop</a>
@@ -98,7 +104,7 @@
                     </div>
                 </article>
                 <article class="gallery-item">
-                    <div class="item-galleri-header"></div>
+                    <div class="item-gallery-header"></div>
                     <img src="img/img-mishka.jpg" alt="Mishka" width="360" height="576">
                     <div class="buy-block">
                         <a href="#">Mishka</a>
@@ -107,7 +113,7 @@
                     </div>
                 </article>
                 <article class="gallery-item">
-                    <div class="item-galleri-header"></div>
+                    <div class="item-gallery-header"></div>
                     <img src="img/img-aplus.jpg" alt="Lerarn+" width="360" height="576">
                     <div class="buy-block">
                         <a href="#">Учёба+</a>
@@ -116,7 +122,7 @@
                     </div>
                 </article>
                 <article class="gallery-item">
-                    <div class="item-galleri-header"></div>
+                    <div class="item-gallery-header"></div>
                     <img src="img/img-kvast.jpg" alt="Craft-Kvas" width="360" height="576">
                     <div class="buy-block">
                         <a href="#">Крафтовый квас</a>
@@ -134,22 +140,26 @@
         </div>
     </main>
     <div class="map">
-        <div class="contacts">
-            <h3>NЁrds design studio</h3>
-            <p>191186, Санкт-Петербург,<br>
-            ул. Б. Конюшенная, д. 19/8<br>
-            <br>
-            <a href="tel:+7(812)275-75-75">тел. +7 (812) 275-75-75</a>
-            </p>
-            <a class="btn" href="#">Напиши нам</a>
+        <div class="container clearfix">
+            <div class="contacts">
+                <h3>NЁrds design studio</h3>
+                <p>
+                191186, Санкт-Петербург,<br>
+                ул. Б. Конюшенная, д. 19/8<br>
+                <br>
+                <a href="tel:+7(812)275-75-75">тел. +7 (812) 275-75-75</a>
+                </p>
+                <a class="btn" href="#">Напиши нам</a>
+            </div>
         </div>
+        <img src="img/map-location.png" alt="location" width="700" height="250" style="display:none">
     </div>
     <footer class="main-footer ">
         <div class="container clearfix">
             <div class="footer-social">
-                <a class="social-btn social-vk" href="https://vk.com/htmlacademy"><img src="img/vk-icon.png" alt="Вконтакте"></a>
-                <a class="social-btn social-facebook" href="https://facebook.com/htmlacademy"><img src="img/fb-icon.png" alt="Фейсбук"></a>
-                <a class="social-btn social-instagram" href="https://instagram.com/htmlacademy"><img src="img/insta-icon.png" alt="Инстаграм"></a>
+                <a class="social-btn social-vk" href="https://vk.com/htmlacademy">Вконтакте</a>
+                <a class="social-btn social-facebook" href="https://facebook.com/htmlacademy">Фейсбук</a>
+                <a class="social-btn social-instagram" href="https://instagram.com/htmlacademy">Инстаграм</a>
             </div>
             <div class="discount">
                 <h4>Давай дружить, это выгодно!</h4>
