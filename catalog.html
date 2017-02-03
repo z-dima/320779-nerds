@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
+     <link href='https://fonts.googleapis.com/css?family=Roboto:500&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -153,6 +154,26 @@
             </div>
         </div>
         <img src="img/map-location.png" alt="location" width="700" height="250" style="display:none">
+    </div>
+    <div class="feedback">
+        <b>Напишите нам</b>
+        <form class="feedback-form">
+            <div class="input-user-date clearfix">
+                <div class="input-username">
+                    <label class="feedback-title" for="feedback-username">Ваше имя:</label>
+                    <input type="text" name="username" class="feedback-username" id="feedback-username" value="Представьтесь пожалуйста">
+                </div>
+                <div class="input-email">
+                    <label class="feedback-title" for="feedback-email">Ваш e-mail:</label>
+                    <input type="text" name="e-mail" class="feedback-email" id="feedback-email" value="Для отправки ответа">
+                </div>
+            </div>
+            <div class="input-text">
+                <label class="feedback-title" for="feedback-text" >Текст письма</label>
+                <textarea name="text" class="feedback-text" id="feedback-text">В свободной форме</textarea>
+            </div>
+            <input class="btn" type="submit" value="Отправить">
+        </form>
     </div>
     <footer class="main-footer ">
         <div class="container clearfix">
