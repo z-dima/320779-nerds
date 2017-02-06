@@ -22,6 +22,14 @@ b {
     text-decoration: none;
 }
 
+h1 {
+    font-size: 55px;
+    line-height: 55px;
+    color: black;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
 h2 {
     font-size: 45px;
     line-height: 45px;
@@ -41,9 +49,10 @@ h3 {
 }
 
 h4 {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 30px;
     color: black;
+    margin: 0;
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -56,6 +65,10 @@ h4 {
 
 .contacts p {
     color: #666666;
+    font-size: 16px;
+    line-height: 18px;
+    margin: 23px 0;
+    padding: 0;
 }
 
 .main-navigation ul {
@@ -107,19 +120,22 @@ h4 {
 }
 
 .main-navigation {
+    margin: 0;
+    padding: 0;
     float: right;
     width: 850px;
     min-height: 70px;
-    background-color: crimson;
+   /* background-color: crimson;*/
 }
 
 .main-navigation li {
     float: left;
-    padding: 10px;
-    margin-right: 25px;
+    margin: 12px 36px 20px 10px;
+    vertical-align: middle;
 }
 .main-navigation li:last-child {
     float: right;
+    margin-right: 0;
 }
 
 .main-header {
@@ -129,7 +145,7 @@ h4 {
     float: left;
     width: 200px;
     min-height: 65px;
-    background-color: coral;
+  /*  background-color: coral;*/
 }
 
 .slider{
@@ -156,8 +172,8 @@ h4 {
 }
 
 .services {
-    padding-top: 80px;
-    border-bottom: 3px orange solid;
+    padding-top: 78px;
+    border-bottom: 3px solid #eeeeee;
     min-height: 425px;
 }
 
@@ -165,7 +181,7 @@ h4 {
     float: left;
     width: 300px;
     margin-right: 100px;
-    background-color: darkmagenta;
+   /* background-color: darkmagenta;*/
 }
 
 .services-item p {
@@ -179,9 +195,9 @@ h4 {
 }
 
 .about-company {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    border-bottom: 3px orange solid;
+    padding-top: 41px;
+    padding-bottom: 45px;
+    border-bottom: 3px solid #eeeeee;
     min-height: 440px;
 }
 
@@ -190,14 +206,14 @@ h4 {
     width: 660px;
     min-height: 430px;
     margin-right: 100px;
-    background-color: darkorchid;
+   /* background-color: darkorchid;*/
 }
 
 .about-company-right {
     float: right;
     width: 400px;
     min-height: 430px;
-    background-color: darkorchid;
+  /* background-color: darkorchid;*/
 }
 
 .about-company-right img {
@@ -206,24 +222,33 @@ h4 {
 }
 
 .customers {
-    min-height: 190px;
-    border-bottom: 3px orange solid;
-}
-.customers a {
-    float: left;
-    margin-right: 38px;
-    border-right: 1px orange solid;
+    border-bottom: 2px solid #eeeeee;
+    font-size: 0px;
 }
 
-.customers a:last-child {
-    float: right;
-    margin-right: 0;
-    border-right: none;
+.customers a  {
+    display: inline-block;
+    margin-right: 40px;
+    opacity: 0.5;
+}
+
+.customers a:hover  {
+    display: inline-block;
+    opacity: 1;
+}
+
+.customers a:active  {
+    display: inline-block;
+    opacity: 0.2;
+}
+
+.customers a:nth-child(4) {
+    margin-right: 0px;
 }
 
 .map {
     min-height: 335px;
-    margin-top: 75px;
+    margin-top: 67px;
     margin-bottom: 40px;
     padding-bottom: 80px;
     background-image: url("../img/map-location.png");
@@ -234,36 +259,62 @@ h4 {
 }
 .contacts {
     position: absolute;
-    width: 300px;
+    width: 220px;
+    padding: 50px;
     min-height: 200px;
     margin-top: 25px;
     margin-left: 50px;
-    background-color: aliceblue;
+    background-color: #ffffff;
+
+}
+
+.contacts h3 {
+    font-size: 18px;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+}
+.contacts .tel {
+    text-decoration: none;
+    color: #666666;
+}
+
+.contacts .btn {
+    margin-top: 38px;
+    width: 187px;
+    font-family: "Roboto", "Arial", sans-serif;
 }
 
 .main-footer {
-    min-height: 80px;
+    min-height: 160px;
 }
 
 .footer-social {
     float: left;
     width: 400px;
-    min-height: 90px;
+    min-height: 175px;
+}
+
+.social-btn {
+    
 }
 
 .discount {
     float: left;
-    width: 750px;
-    min-height: 90px;
+    padding-top: 30px;
+}
+
+.discount h4 {
+    text-transform: none;
 }
 
 /*****************************СТРАНИЦА МАГАЗИНА********************/
 
 .logo-title {
-    padding-top: 50px;;
+    padding-top: 35px;
     text-align: center;
     clear: both;
-    min-height: 185px;
+    min-height: 198px;
 }
 
 .select {
@@ -291,19 +342,50 @@ h4 {
 input[type="radio"],
 input[type="checkbox"]
 {
+    display: none;
+}
+.select-item label {
     display: block;
 }
 
 .select-item {
     min-height: 150px;
 }
+
+.select-item h4,
+.gallery-sort h4,
+.gallery-sort-item{
+    padding: 35px 0 48px 0;
+}
+
+
+.gallery-sort h4 {
+    float: left
+}
+
+.gallery-sort-item {
+    font-size: 14px;
+    float: right;
+    text-transform: uppercase;
+    padding-left: 25px;
+}
+
+.gallery-sort-item a {
+    margin-right: 22px;
+}
+
+.sort-direct {
+    float: right;
+}
+
+.sort-direct a {
+    margin-left: 15px;
+    margin-right: 0;
+}
+
 .gallery {
     float: left;
     width: 760px;
-}
-
-.gallery-sort {
-    padding-bottom: 30px;
 }
 
 .gallery-wrap {
@@ -324,6 +406,7 @@ input[type="checkbox"]
 .item-gallery-header {
     min-height: 40px;
     background-color: dimgrey;
+    border-radius: 3px 3px 0 0;
 }
 
 .buy-block {
@@ -331,27 +414,51 @@ input[type="checkbox"]
 }
 
 .pages {
+    display: inline-block;
     padding-top: 30px;
     clear: both;
+    margin: 0;
 }
 
 .pages a {
     display: inline-block;
-    width: 45px;
-    height: 45px;
-    margin-right: 15px;
+    width: 18px;
+    height: 18px;
+    vertical-align: top;
+    margin-right: 10px;
     background-color: #eeeeee;
     color: black;
 }
+
 .pages a:hover {
-    background-color: lightgrey;
+    background-color: #e5e5e5;
 }
+
 .pages a:active {
-    background-color: gray;
+    background-color: #d5d5d5;
+    box-shadow: inset 0 3px #b5b5b5;
+}
+
+.pages span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    font-size: 16px;
+    line-height: 18px;
+    padding: 11px;
+    text-align: center;
+    vertical-align: top;
+    text-decoration: none;
+    color: #000000;
+    text-transform: uppercase;
+    border-radius: 3px;
+    margin-right: 10px;
+    border: 3px solid #f1f1f1;
 }
 
 .pages a:last-child {
-    width: 250px;
+    width: 230px;
 }
 .gallery-sort h4 {
     display: inline-block;
@@ -481,7 +588,7 @@ textarea {
     line-height: 18px;
     padding: 15px;
     background-color: #fb565a;
-    border-radius: 5px;
+    border-radius: 3px;
     text-transform: uppercase;
     text-decoration: none;
     text-align: center;
@@ -498,17 +605,28 @@ textarea {
 
 .btn:active {
     background-color: #b63538;
+    box-shadow: inset 0 2px firebrick;
 }
 
 .footer-social a {
     display: inline-block;
-    vertical-align: top;
+    vertical-align: middle;
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    margin-top: 10px;
+    margin-top: 30px;
     margin-right: 5px;
     background-color: dimgray;
+    font-size: 0;
+}
+
+.footer-social a:hover {
+    background-color: #d6494d;
+}
+
+.footer-social a:active {
+    background-color: #b63538;
+    box-shadow: inset 0 2px firebrick;
 }
 
 .social-vk {
@@ -529,4 +647,5 @@ div, article, header, footer, section, a, p {
 .container {
     outline: 1px solid red;
     background-color: rgba(0, 50, 0, 0.2);
-}*/
+}
+*/
