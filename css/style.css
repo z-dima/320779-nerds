@@ -7,7 +7,6 @@ body {
     font-weight: normal;
     color: black;
     background-color: white;
-    /*background-image: url("../nerds-index.jpg"); /*загружаю изо*/
 }
 
 b {
@@ -81,10 +80,6 @@ h4 {
     text-decoration: none;
 }
 
-.main-navigation a:hover {
-    color:red;
-}
-
 .main-navigation a:active {
     color: grey;
 }
@@ -119,35 +114,88 @@ h4 {
     background-color: #eeeeee;
 }
 
-.main-navigation {
-    margin: 0;
-    padding: 0;
-    float: right;
-    width: 850px;
-    min-height: 70px;
-   /* background-color: crimson;*/
+/*Меню навигации /\ */
+.header-top-right {
+    float:right;
+    width: 838px;
+    min-height: 64px;
+    margin-top: 9px;
+}
+
+.header-top-right a {
+    font-size: 16px;
+    line-height: 30px;
+    text-decoration: none;
+    display: block;
+    text-transform: uppercase;
+}
+
+.header-top-right a:hover {
+    color: #fb565a;
+}
+
+.header-top-right a:active {
+    color: #000000;
+    opacity: 0.4;
+}
+
+ul.main-navigation {
+    padding-left: 0px;
+}
+
+nav {
+    display: inline-block;
+    width: 640px;
+    vertical-align: middle;
 }
 
 .main-navigation li {
-    float: left;
-    margin: 13px 33px 20px 12px;
+    display: inline-block;
     vertical-align: middle;
+    font-size: 16px;
+    line-height: 30px;
+    padding-bottom: 5px;
+    margin-right: 42px;
 }
+
 .main-navigation li:last-child {
-    float: right;
     margin-right: 0;
 }
 
+.user-block {
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+    margin: 16px 0px;
+    padding-left: 40px;
+}
+
+.user-block a {
+    color: black;
+    max-width: 100px;
+}
+/*
+.basket-ic {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background: url("../img/cart-icon.png");
+    opacity: 0.3;
+}*/
 .basket::before {
-    content: "";
+
     position: absolute;
     top: 82px;
-    right: 311px;
+    right: 300px;
+    content: "";
     width: 15px;
     height: 15px;
     background: url("../img/cart-icon.png");
     opacity: 0.3;
 }
+/*Меню навигации*/
 
 .main-header {
     padding-top: 49px;
@@ -240,12 +288,21 @@ h4 {
     margin-bottom: 23px;
     padding-left: 0;
 }
+/*
+.info-list li:before {
+    content: "";
+    width: 25px;
+    border-bottom: 2px solid #fb565a;
+    left: 0;
+    top: 50%;
+    margin-top: -1px;
+    position: absolute;
+}*/
 
 .about-company-right {
     float: right;
     width: 400px;
     min-height: 430px;
-  /* background-color: darkorchid;*/
 }
 
 .table-logo {
@@ -375,8 +432,6 @@ h4 {
 /*****************************СТРАНИЦА МАГАЗИНА********************/
 
 .main-navigation .active {
-    display: block;
-    padding-bottom: 5px;
     border-bottom: 2px solid #fb565a;
 }
 
@@ -1020,8 +1075,9 @@ textarea {
     display: block;
 }
 /**********************************СЛАЙДЕР**************************/
+
 /*
-div, article, header, footer, section, a, p {
+div, article, nav, header, footer, section, a, p {
     outline: 1px solid indigo;
     background-color: rgba(0, 0, 50, 0.1);
 }*/
