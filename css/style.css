@@ -335,6 +335,7 @@ nav {
 .customers {
     border-bottom: 2px solid #eeeeee;
     font-size: 0px;
+    line-height: 0;
 }
 
 .customers a  {
@@ -382,6 +383,14 @@ nav {
     background-image: url("../img/map-location.png");
 }
 
+.real-map {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 1583px;
+    height: 415px;
+}
+
 .map img {
     margin-right: 0;
 }
@@ -398,6 +407,7 @@ nav {
     min-height: 200px;
     top: 55px;
     background-color: #ffffff;
+    z-index: 20;
 }
 
 .contacts h3 {
@@ -841,6 +851,21 @@ input[type="checkbox"]+label:hover::after {
 
 /***********ВСПЛЫВАЮЩЕЕ ОКНО**************/
 
+@keyframes bounce {
+  0%   {
+    transform: translateY(-2000px);
+  }
+  70%  {
+    transform: translateY(30px);
+  }
+  90%  {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .feedback {
     position: fixed;
     left: 310px;
@@ -849,9 +874,21 @@ input[type="checkbox"]+label:hover::after {
     height: 460px;
     padding: 65px 100px;
     background: white;
-    z-index: 200;
+    z-index: 50;
     box-shadow: 0 19px 48px 3px #595a5a;
     display: none;
+}
+
+.feedback-show {
+    display: block;
+    animation: bounce 0.6s;
+}
+
+
+/*********ОШИБКА ВВОДА ДАННЫХ*************/
+.feedback-error {
+    border: 2px solid #e74246;
+    color: #e74246;
 }
 
 .feedback b {
@@ -1167,7 +1204,7 @@ textarea {
     height:10px;
     margin-left:-100px;
     text-align:center;
-    z-index:100;
+    z-index:10;
 }
 .slider-controls label{
     display:inline-block;

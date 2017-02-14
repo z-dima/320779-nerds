@@ -134,12 +134,13 @@
                 <br>
                 <a class="tel" href="tel:+7(812)275-75-75">тел. +7 (812) 275-75-75</a>
                 </p>
-                <a class="btn" href="#">Напишите нам</a>
+                <a class="btn feedback-open" href="#">Напишите нам</a>
             </div>
             <div class="marker-map">
                 <img src="img/map-marker.png" alt="map-marker" width="367" height="190">
             </div>
         </div>
+        <iframe class="real-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="1583" height="415" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
     <div class="feedback">
         <b>Напишите нам</b>
@@ -176,6 +177,73 @@
             </div>
         </div>
     </footer>
+    <script>
+        var link = document.querySelector(".feedback-open");
+        
+        var popup = document.querySelector(".feedback");
+        var close = popup.querySelector(".btn-close");
+        
+        var form = popup.querySelector("feedback-form");
+        var login = popup.querySelector("[name=username]");
+        var email = popup.querySelector("[name=e-mail]");
+        
+        var storage = localStorage.getItem("login");
+        
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
+            popup.classList.add("feedback-show");
 
+            if (storage) {
+                login.value = storage;
+                password.focus();
+            } else {
+                login.focus();
+            }
+            
+        }); //Открытие формы
+        
+        close.addEventListener("click", function(event) {
+            event.preventDefault();
+            popup.classList.remove("feedback-show");
+        }); //Закрытие формы
+        
+        form.addEventListener("submit", function(event) {
+            if (!login.value || !email.value) {
+                event.preventDefault();
+                popup.classList.remove("feedback-error");
+                popup.offsetWidth = popup.offsetWidth;
+                popup.classList.add("feedback-error");
+            } else {
+                localStorage.setItem("login", login.value);
+            }
+        }); //Изменение события отправки формы
+        
+        window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 27) {
+            if (popup.classList.contains("feedback-show")) {
+            popup.classList.remove("feedback-show");
+          }
+        }
+      });
+  
+        /*******МАРКЕР_КАРТЫ*********/
+        /*function initMap() {
+            var centerLatLng = new google.maps.LatLng(59.9390358, 30.3219136);
+            var mapOptions = {
+                center: centerLatLng,
+                zoom: 8
+            };
+
+            var map = new google.maps.Map(document.querySelector(".real-map"), mapOptions);
+            var image = "img/map-marker.png";
+            // Добавляем маркер
+            var marker = new google.maps.Marker({
+            position: centerLatLng, // Координаты расположения маркера.
+            map: map, // Карта на которую нужно добавить маркер
+            icon: image
+            });
+            }
+        google.maps.event.addDomListener(window, "load", initMap);*/
+    </script>
 </body>
 </html>
