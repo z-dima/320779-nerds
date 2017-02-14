@@ -55,6 +55,7 @@ h4 {
 .discount h4 {
     font-size: 36px;
     line-height: 36px;
+    letter-spacing: 0.3px;
     color: black;
 }
 
@@ -276,8 +277,8 @@ nav {
 .about-company-left li {
     list-style: none;  
     margin-top: 25px;
-    margin-left: 0px;
-    margin-bottom: 23px;
+    margin-left: -3px;
+    margin-bottom: -1px;
     padding-left: 0;
 }
 
@@ -289,8 +290,8 @@ nav {
     content: "";
     width: 25px;
     border-bottom: 2px solid #fb565a;
-    left: 0;
-    margin-top: 10px;
+    left: 1px;
+    margin-top: 11px;
 }
 
 .about-company-right {
@@ -336,12 +337,13 @@ nav {
     border-bottom: 2px solid #eeeeee;
     font-size: 0px;
     line-height: 0;
+    margin-bottom: 20px;
 }
 
 .customers a  {
     display: inline-block;
     margin-right: 40px;
-    opacity: 0.5;
+    opacity: 0.2;
     position: relative;
 }
 
@@ -362,7 +364,7 @@ nav {
 
 .customers a:active  {
     display: inline-block;
-    opacity: 0.2;
+    opacity: 0.1;
 }
 
 .customers a:nth-child(4) {
@@ -377,7 +379,7 @@ nav {
 .map {
     position: relative;
     height: 335px;
-    margin-top: 67px;
+    margin-top: 60px;
     margin-bottom: 40px;
     padding-bottom: 80px;
     background-image: url("../img/map-location.png");
@@ -405,7 +407,7 @@ nav {
     width: 220px;
     padding: 50px;
     min-height: 200px;
-    top: 55px;
+    top: 53px;
     background-color: #ffffff;
     z-index: 20;
 }
@@ -459,8 +461,8 @@ nav {
     padding-top: 32px;
     text-align: center;
     clear: both;
-    height: 195px;
-    margin-bottom: 23px;
+    height: 198px;
+    margin-bottom: 21px;
 }
 
 .select {
@@ -506,23 +508,23 @@ nav {
 }
 
 .select-item:nth-child(2) {
-    margin-top: 59px;
+    margin-top: 55px;
 }
 
 .select-item:nth-child(2) label {
     margin-top: 13px;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     padding-left: 36px; 
 }
 
 .select-item:nth-child(3) {
-    margin-top: 40px;
-    margin-bottom: 20px;
+    margin-top: 41px;
+    margin-bottom: 28px;
 }
 
 .select-item:nth-child(3) label {
-    margin-top: 13px;
-    margin-bottom: 18px;
+    margin-top: 14px;
+    margin-bottom: 16px;
     padding-left: 36px;
     white-space: nowrap;
 }
@@ -539,11 +541,12 @@ input[type="radio"]+label::before {
     position: absolute;
     top: -1px;
     left: 0px;
-    background-image: url("../img/radio-off.png");
+    background-image: url("../img/radio-check-sprite.png");
     background-repeat: no-repeat;
+    background-position: -100px -13px;
     width: 25px;
     height: 25px;
-    opacity: 0.2;
+    opacity: 0.5;
     cursor: pointer;
 }
 
@@ -553,29 +556,32 @@ input[type="radio"]:checked+label::after {
     position: absolute;
     top: -1px;
     left: 0px;
-    background-image: url("../img/radio-on.png");
+    background-image: url("../img/radio-check-sprite.png");
     background-repeat: no-repeat;
+    background-position: -145px -13px;
     width: 25px;
     height: 25px;
-    opacity: 0.2;
+    opacity: 0.5;
     cursor: pointer;
 }
 
 input[type="radio"]+label:hover::before {
-    background-image: url("../img/radio-off.png");
+    background-image: url("../img/radio-check-sprite.png");
     background-repeat: no-repeat;
+    background-position: -100px -13px;
     width: 25px;
     height: 25px;
-    opacity: 0.8;
+    opacity: 1;
     cursor: pointer;
 }
 
 input[type="radio"]+label:hover::after {
-    background-image: url("../img/radio-on.png");
+    background-image: url("../img/radio-check-sprite.png");
     background-repeat: no-repeat;
+    background-position: -145px -13px;
     width: 25px;
     height: 25px;
-    opacity: 0.8;
+    opacity: 1;
     cursor: pointer;
 }
 
@@ -587,11 +593,12 @@ input[type="checkbox"]+label::before {
     position: absolute;
     top: -1px;
     left: 0px;
-    background-image: url("../img/checkbox-off.png");
+    background-image: url("../img/radio-check-sprite.png");
     background-repeat: no-repeat;
+    background-position: -10px -13px;
     width: 25px;
     height: 25px;
-    opacity: 0.2;
+    opacity: 0.4;
     cursor: pointer;
 }
 
@@ -601,17 +608,19 @@ input[type="checkbox"]:checked+label::after {
     position: absolute;
     top: -1px;
     left: 0px;
-    background-image: url("../img/checkbox-on.png");
+    background-image: url("../img/radio-check-sprite.png");
     background-repeat: no-repeat;
+    background-position: -54px -13px;
     width: 25px;
     height: 25px;
-    opacity: 0.2;
+    opacity: 0.4;
     cursor: pointer;
 }
 
 input[type="checkbox"]+label:hover::before {
-    background-image: url("../img/checkbox-off.png");
+    background-image: url("../img/radio-check-sprite.png");
     background-repeat: no-repeat;
+    background-position: -10px -13px;
     width: 25px;
     height: 25px;
     opacity: 0.7;
@@ -619,8 +628,9 @@ input[type="checkbox"]+label:hover::before {
 }
 
 input[type="checkbox"]+label:hover::after {
-    background-image: url("../img/checkbox-on.png");
+    background-image: url("../img/radio-check-sprite.png");
     background-repeat: no-repeat;
+    background-position: -54px -13px;
     width: 25px;
     height: 25px;
     opacity: 0.7;
@@ -645,6 +655,7 @@ input[type="checkbox"]+label:hover::after {
     text-decoration: none;
     text-align: center;
     border: none;
+    cursor: pointer;
 }
 
 .select input[type="submit"]:hover {
@@ -687,12 +698,15 @@ input[type="checkbox"]+label:hover::after {
     font-size: 14px;
     float: right;
     text-transform: uppercase;
-    padding-left: 25px;
+    margin-left: 25px;
     padding-top: 39px;
+    width: 361px;
 }
 
 .gallery-sort-item a {
-    margin-right: 27px;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 23px;
     opacity: 0.5;
 }
 .gallery-sort-item a:hover {
@@ -1085,11 +1099,11 @@ textarea {
 .footer-social a {
     display: inline-block;
     vertical-align: middle;
-    width: 80px;
-    height: 80px;
+    width: 78px;
+    height: 78px;
     border-radius: 50%;
-    margin-top: 30px;
-    margin-right: 7px;
+    margin-top: 29px;
+    margin-right: 10px;
     background-color: #e1e1e1;
     font-size: 0;
 }
@@ -1246,17 +1260,17 @@ textarea {
 .slide:nth-child(1){
     background-image:url("../img/nerds-index-slide1.png");
     background-repeat:no-repeat;
-    background-position:100% 10px;
+    background-position:99% -9px;
 }
 .slide:nth-child(2){
     background-image:url("../img/nerds-index-slide2.png");
     background-repeat:no-repeat;
-    background-position:100% 10px;
+    background-position:99% -9px;
 }
 .slide:nth-child(3){
     background-image:url("../img/nerds-index-slide3.png");
     background-repeat:no-repeat;
-    background-position:100% 0;
+    background-position:99% -9px;
 }
 .slide{
     display:none;
