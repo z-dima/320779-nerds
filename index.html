@@ -6,6 +6,7 @@
      <link href='https://fonts.googleapis.com/css?family=Roboto:500&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/normal_v5.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 </head>
 <body>
     <header class="main-header">
@@ -123,7 +124,7 @@
         </div>
     </main>
     <div class="map">
-        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=0tcrEx35JmEAvmiLTH060-GsRwIgWrO1&amp;width=100%25&amp;height=415&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+        <div id="yandex-map" style="width: 100%; height: 415px"></div>
         <div class="container clearfix">
             <div class="contacts">
                 <h3>NЁrds design studio</h3>
@@ -142,7 +143,7 @@
     </div>
     <div class="feedback">
         <b>Напишите нам</b>
-        <form class="feedback-form">
+        <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data">
             <div class="input-user-date clearfix">
                 <div class="input-username">
                     <label class="feedback-title" for="feedback-username">Ваше имя:</label>
@@ -205,7 +206,7 @@
         }); //Закрытие формы
         
         form.addEventListener("submit", function(event) {
-            if (!username.value || !password.value) {
+            if (!username.value || !email.value) {
                 event.preventDefault();
                 username.classList.remove("feedback-error");
                 username.offsetWidth = popup.offsetWidth;
@@ -223,30 +224,26 @@
             }
         });
   
-       ymaps.ready(function () {
-        var myMap = new ymaps.Map("map", {
-            center: [59.938414, 30.323072],
-            zoom: 17
-        }, {
-            searchControlProvider: "yandex#search"
-        }),
-        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: "NЁRDS DESIGN STUDIO"
-        }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
-            iconLayout: "default#image",
-            // Своё изображение иконки метки.
-            iconImageHref: "http://www.market4game.ru/data/avatars/m/38/38283.jpg?1424789567",
-            // Размеры метки.
-            iconImageSize: [48, 48],
-            // Смещение левого верхнего угла иконки относительно
-            // её "ножки" (точки привязки).
-            iconImageOffset: [0,0]
-        });
+       ymaps.ready(init);
+        var myMap, 
+            myPlacemark;
 
-        myMap.geoObjects.add(myPlacemark);
-        });
+        function init(){ 
+            myMap = new ymaps.Map("yandex-map", {
+                center: [59.938414, 30.323072],
+                zoom: 17
+            }); 
+            
+            myPlacemark = new ymaps.Placemark([59.938414, 30.323072], {
+                iconLayout: "default#image",
+                iconImageHref: "img/map-marker.png",
+                iconImageSize: [367, 190],
+                hintContent: "NЁRDS DESIGN STUDIO",
+                balloonContent: "NЁRDS DESIGN STUDIO"
+            });
+            
+            myMap.geoObjects.add(myPlacemark);
+        }
     </script>
 </body>
 </html>
