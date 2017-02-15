@@ -123,6 +123,7 @@
         </div>
     </main>
     <div class="map">
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=0tcrEx35JmEAvmiLTH060-GsRwIgWrO1&amp;width=100%25&amp;height=415&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
         <div class="container clearfix">
             <div class="contacts">
                 <h3>NЁrds design studio</h3>
@@ -134,11 +135,10 @@
                 </p>
                 <a class="btn feedback-open" href="#">Напишите нам</a>
             </div>
-            <div class="marker-map">
+            <!--<div class="marker-map">
                 <img src="img/map-marker.png" alt="map-marker" width="367" height="190">
-            </div>
+            </div>-->
         </div>
-        <iframe class="real-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="1583" height="415" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
     <div class="feedback">
         <b>Напишите нам</b>
@@ -168,7 +168,6 @@
                 <a class="social-btn social-facebook" href="https://facebook.com/htmlacademy">Фейсбук</a>
                 <a class="social-btn social-instagram" href="https://instagram.com/htmlacademy">Инстаграм</a>
             </div>
-
             <div class="discount">
                 <h4>Давайте дружить, это выгодно!</h4>
                 <p>Скидка 10% для друзей из социальных сетей.</p>
@@ -181,8 +180,8 @@
         var popup = document.querySelector(".feedback");
         var close = popup.querySelector(".btn-close");
         
-        var form = popup.querySelector("feedback-form");
-        var login = popup.querySelector("[name=username]");
+        var form = popup.querySelector(".feedback-form");
+        var username = popup.querySelector("[name=username]");
         var email = popup.querySelector("[name=e-mail]");
         
         var storage = localStorage.getItem("login");
@@ -192,10 +191,10 @@
             popup.classList.add("feedback-show");
 
             if (storage) {
-                login.value = storage;
+                username.value = storage;
                 password.focus();
             } else {
-                login.focus();
+                username.focus();
             }
             
         }); //Открытие формы
@@ -206,42 +205,48 @@
         }); //Закрытие формы
         
         form.addEventListener("submit", function(event) {
-            if (!login.value || !email.value) {
+            if (!username.value || !password.value) {
                 event.preventDefault();
-                popup.classList.remove("feedback-error");
-                popup.offsetWidth = popup.offsetWidth;
-                popup.classList.add("feedback-error");
+                username.classList.remove("feedback-error");
+                username.offsetWidth = popup.offsetWidth;
+                username.classList.add("feedback-error");
             } else {
-                localStorage.setItem("login", login.value);
+                localStorage.setItem("username", login.value);
             }
         }); //Изменение события отправки формы
         
         window.addEventListener("keydown", function(event) {
-        if (event.keyCode === 27) {
-            if (popup.classList.contains("feedback-show")) {
-            popup.classList.remove("feedback-show");
-          }
-        }
-      });
-  
-        /*******МАРКЕР_КАРТЫ*********/
-        /*function initMap() {
-            var centerLatLng = new google.maps.LatLng(59.9390358, 30.3219136);
-            var mapOptions = {
-                center: centerLatLng,
-                zoom: 8
-            };
-
-            var map = new google.maps.Map(document.querySelector(".real-map"), mapOptions);
-            var image = "img/map-marker.png";
-            // Добавляем маркер
-            var marker = new google.maps.Marker({
-            position: centerLatLng, // Координаты расположения маркера.
-            map: map, // Карта на которую нужно добавить маркер
-            icon: image
-            });
+            if (event.keyCode === 27) {
+                if (popup.classList.contains("feedback-show")) {
+                popup.classList.remove("feedback-show");
+              }
             }
-        google.maps.event.addDomListener(window, "load", initMap);*/
+        });
+  
+       ymaps.ready(function () {
+        var myMap = new ymaps.Map("map", {
+            center: [59.938414, 30.323072],
+            zoom: 17
+        }, {
+            searchControlProvider: "yandex#search"
+        }),
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: "NЁRDS DESIGN STUDIO"
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: "default#image",
+            // Своё изображение иконки метки.
+            iconImageHref: "http://www.market4game.ru/data/avatars/m/38/38283.jpg?1424789567",
+            // Размеры метки.
+            iconImageSize: [48, 48],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [0,0]
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+        });
     </script>
 </body>
 </html>
