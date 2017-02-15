@@ -352,7 +352,7 @@ nav {
     opacity: 1;
 }
 
-.customers a::after {
+.customers a::before {
     content: "";
     position: absolute;
     width: 2px;
@@ -837,7 +837,7 @@ input[type="checkbox"]+label:hover::before {
     top: 25px;
     width: 760px;
     height: 460px;
-    margin-left: -380px;
+    margin-left: -460px;
     padding: 65px 100px;
     background: white;
     z-index: 50;
@@ -885,6 +885,10 @@ textarea {
     color: gray;
 }
 
+.input-user-date input[type="text"],
+    input[type="email"] {
+    outline: none;
+}
 .input-username {
     display: block;
     float: left;
@@ -911,6 +915,9 @@ textarea {
     padding: 10px 15px;
     border: 2px solid #d7dcde;
     border-radius: 3px;
+    font-size: 16px;
+    line-height: 18px;
+    font-family: "Roboto", "Arial", sans-serif;
     outline: none;
 }
 
@@ -929,6 +936,9 @@ textarea {
     padding-left: 15px;
     border: 2px solid #d7dcde;
     border-radius: 3px;
+    font-size: 16px;
+    line-height: 18px;
+    font-family: "Roboto", "Arial", sans-serif;
 }
 
 .feedback-username:hover {
@@ -946,6 +956,9 @@ textarea {
     padding-left: 15px;
     border: 2px solid #d7dcde;
     border-radius: 3px;
+    font-size: 16px;
+    line-height: 18px;
+    font-family: "Roboto", "Arial", sans-serif;
 }
 
 .feedback-email:hover {
