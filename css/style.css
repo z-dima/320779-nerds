@@ -7,17 +7,10 @@ body {
     font-weight: normal;
     color: black;
     background-color: white;
+    min-width: 1200px;
 }
 
-b {
-    font-size: 55px;
-    line-height: 55px;
-    color: black;
-    font-weight: normal;
-    text-decoration: none;
-}
-
-h1 {
+.logo-title h1 {
     font-size: 55px;
     line-height: 55px;
     color: black;
@@ -25,7 +18,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-h2 {
+.about-company h2 {
     font-size: 45px;
     line-height: 45px;
     color: black;
@@ -33,7 +26,8 @@ h2 {
     margin-bottom: 20px;
 }
 
-h3 {
+.services h3,
+.contacts h3 {
     font-size: 24px;
     line-height: 30px;
     color: black;
@@ -43,7 +37,10 @@ h3 {
     text-transform: uppercase;
 }
 
-h4 {
+.about-company h4,
+.select h4,
+.gallery h4,
+.discount h4 {
     font-size: 18px;
     line-height: 30px;
     color: black;
@@ -143,7 +140,7 @@ ul.main-navigation {
     padding-left: 0px;
 }
 
-nav {
+.header-top-right nav {
     display: inline-block;
     width: 640px;
     vertical-align: middle;
@@ -185,7 +182,9 @@ nav {
     content: "";
     width: 15px;
     height: 15px;
-    background: url("../img/cart-icon.png");
+    background-image: url("../img/sprite_nerds.png"); 
+    background-repeat: no-repeat; 
+    background-position: -123px -52px;
     opacity: 0.3;
 }
 /*Меню навигации*/
@@ -199,7 +198,6 @@ nav {
     width: 200px;
     margin: 0;
     padding: 0;
-  /*  background-color: coral;*/
 }
 
 .header-logo:hover {
@@ -235,7 +233,6 @@ nav {
     float: left;
     width: 300px;
     margin-right: 100px;
-   /* background-color: darkmagenta;*/
 }
 
 .services-item p {
@@ -245,7 +242,19 @@ nav {
 }
 
 .services-item:last-child {
-    margin-right: 0; /*на случай если придётся подгонять прям до края*/
+    margin-right: 0;
+}
+
+.services-item img:nth-child(1) {
+    background-color: #fb565a;
+}
+
+.services-item img:nth-child(2) {
+    background-color: #50b976;
+}
+
+.services-item img:nth-child(3) {
+    background-color: #efc849;
 }
 
 .about-company {
@@ -260,13 +269,13 @@ nav {
     width: 660px;
     min-height: 430px;
     margin-right: 100px;
-   /* background-color: darkorchid;*/
 }
 
 .about-company-left h2 {
     margin-top: 35px;
     margin-bottom: 33px; 
 }
+
 .about-company-left h4,
 .about-company-right h4{
     font-size: 16px;
@@ -529,9 +538,9 @@ input[type="radio"]+label::before {
     position: absolute; 
     top: -1px; 
     left: 0px; 
-    background-image: url("../img/radio-check-sprite.png"); 
+    background-image: url("../img/sprite_nerds.png"); 
     background-repeat: no-repeat; 
-    background-position: -100px -13px; /*-10px -13px;*/
+    background-position: -83px -9px;
     width: 25px; 
     height: 25px; 
     opacity: 0.5; 
@@ -539,7 +548,7 @@ input[type="radio"]+label::before {
 } 
 
 input[type="radio"]:checked+label::before { 
-    background-position: -145px -13px; /*-54px -13px;*/
+    background-position: -118px -9px;
     opacity: 0.5; 
     cursor: pointer; 
 } 
@@ -556,9 +565,9 @@ input[type="checkbox"]+label::before {
     position: absolute; 
     top: -1px; 
     left: 0px; 
-    background-image: url("../img/radio-check-sprite.png"); 
+    background-image: url("../img/sprite_nerds.png"); 
     background-repeat: no-repeat; 
-    background-position: -11px -13px;
+    background-position: -12px -9px;
     width: 25px; 
     height: 25px; 
     opacity: 0.5; 
@@ -567,7 +576,7 @@ input[type="checkbox"]+label::before {
 
 
 input[type="checkbox"]:checked+label::before {
-    background-position: -54px -13px;
+    background-position: -46px -9px;
     opacity: 0.5; 
     cursor: pointer; 
 }
@@ -685,6 +694,10 @@ input[type="checkbox"]+label:hover::before {
 
 .gallery-item:nth-child(2n) {
     margin-right: 0;
+}
+
+.gallery-item img {
+    background-color: #eeeeee;
 }
 
 .item-gallery-header {
@@ -837,7 +850,7 @@ input[type="checkbox"]+label:hover::before {
     top: 25px;
     width: 760px;
     height: 460px;
-    margin-left: -460px;
+    margin-left: -480px;
     padding: 65px 100px;
     background: white;
     z-index: 50;
@@ -1087,13 +1100,19 @@ textarea {
 }
 
 .social-vk {
-    background: url("../img/vk-icon.png") no-repeat center;
+    background-image: url("../img/sprite_nerds.png"); 
+    background-repeat: no-repeat; 
+    background-position: -100px -95px;
 }
 .social-facebook {
-    background: url("../img/fb-icon.png") no-repeat center;
+    background-image: url("../img/sprite_nerds.png"); 
+    background-repeat: no-repeat; 
+    background-position: 15px -38px;
 }
 .social-instagram {
-    background: url("../img/insta-icon.png") no-repeat center;
+    background-image: url("../img/sprite_nerds.png"); 
+    background-repeat: no-repeat; 
+    background-position: 15px -92px;
 }
 
 /*******************СЛОЖНЫЙ ФИЛЬТР****************************/
