@@ -352,13 +352,28 @@ ul.main-navigation {
 .customers a  {
     display: inline-block;
     margin-right: 40px;
-    opacity: 0.2;
     position: relative;
 }
 
-.customers a:hover  {
-    display: inline-block;
+.customers img {
+    opacity: 0.2;
+}
+
+.customers img:hover {
     opacity: 1;
+}
+
+.customers img:active {
+    opacity: 0.1;
+}
+
+.customers a:hover,
+.customers a:active {
+    display: inline-block;
+}
+
+.customers a:nth-child(4n) {
+    margin-right: 0px;
 }
 
 .customers a::before {
@@ -368,23 +383,12 @@ ul.main-navigation {
     height: 50px;
     top: 65px;
     right: -20px;
-    background: #dddddd;
+    background: #eeeeee;
 }
 
-.customers a:active  {
-    display: inline-block;
-    opacity: 0.1;
+.customers a:nth-child(4n)::before {
+    display: none;
 }
-
-.customers a:nth-child(4) {
-    margin-right: 0px;
-}
-
-.customers a:nth-child(4)::after {
-    content: "";
-    background: white;
-}
-
 .map {
     position: relative;
     height: 335px;
@@ -428,6 +432,7 @@ ul.main-navigation {
 .main-footer {
     margin-top: 40px;
     min-height: 160px;
+    padding-bottom: 20px;
 }
 
 .footer-social {
@@ -439,6 +444,7 @@ ul.main-navigation {
 .discount {
     float: left;
     margin-top: 35px;
+    width: 570px;
 }
 
 .discount h4 {
@@ -692,6 +698,10 @@ input[type="checkbox"]+label:hover::before {
     height: 616px;
 }
 
+.gallery-item:hover {
+    box-shadow: 0 5px 15px 0 #cfcfcf;
+}
+
 .gallery-item:nth-child(2n) {
     margin-right: 0;
 }
@@ -847,7 +857,7 @@ input[type="checkbox"]+label:hover::before {
 .feedback {
     position: fixed;
     left: 50%;
-    top: 25px;
+    top: 10%;
     width: 760px;
     height: 460px;
     margin-left: -480px;
