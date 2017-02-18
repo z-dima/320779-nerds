@@ -54,11 +54,11 @@ function init(){
         zoom: 17
     }); 
     myPlacemark = new ymaps.Placemark([59.93870788, 30.32301386], { 
-        hintContent: 'NERDS', 
-        balloonContent: 'NERDS' 
+        hintContent: "NERDS", 
+        balloonContent: "NERDS" 
     }, { 
-        iconLayout: 'default#image', 
-        iconImageHref: 'img/map-marker.png',
+        iconLayout: "default#image", 
+        iconImageHref: "img/map-marker.png",
         iconImageOffset: [-185, -165],
         iconImageSize: [367, 190] 
     }); 
